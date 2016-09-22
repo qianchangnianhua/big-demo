@@ -5,7 +5,7 @@ class LeftNav extends React.Component {
   render () {
     return(
       <div className="left-nav">
-        <h3>Newming@Home</h3>
+        <h3>Newming@{this.props.title}</h3>
         <Link to="/" activeStyle={{backgroundColor:'rgba(0,0,0,0.3)'}}
         onlyActiveOnIndex={true}><span className="glyphicon glyphicon-home" aria-hidden="true"></span>
         &nbsp;&nbsp;Home</Link>
@@ -17,8 +17,6 @@ class LeftNav extends React.Component {
         <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;Me</Link>
       </div>
     )
-
   }
 }
-
 export default LeftNav;

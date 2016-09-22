@@ -1,15 +1,20 @@
 import React, { PropTypes } from 'react'
 
 class NavHeader extends React.Component {
+  handleBack(){
+    this.context.router.goBack();
+  }
   render () {
     return(
       <div className="nav-header">
-        <span><p className="glyphicon glyphicon-menu-left" aria-hidden="true"></p>Back</span>
-        <h3>Newbolon@Home</h3>
-        <span className="glyphicon glyphicon-globe" aria-hidden="true"></span>
+        <p style={{fontSize:'18px'}} onClick={this.handleBack.bind(this)}><i className="glyphicon glyphicon-chevron-left" aria-hidden="true"></i>Back</p>
+        <h3>Newming@{this.props.title}</h3>
+        <p className="glyphicon glyphicon-apple" aria-hidden="true"></p>
       </div>
     )
   }
 }
-
+NavHeader.contextTypes = {
+  router: React.PropTypes.object.isRequired
+}
 export default NavHeader;
