@@ -5,6 +5,8 @@ import App from './App.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
 import MyRoutes from './routers.js';
+import 'highlight.js/styles/github.css';
+import './post.css';
 
 
 // import Test from './Test.js';
